@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>登陆-美食林欢迎您！</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/image/favicon1.ico"/>
+</head>
+<body>
+<div id="modal">
+    <div>
+        <a href="#"><img src="images/login/shunin.png"></a>
+        <b>欢迎登陆</b>
+        <a href="#" class="weixin">
+            <div>
+                <img src="images/login/weixin3.png">
+            </div>
+        </a>
+        <a href="#" class="weibo"></a>
+    </div>
+    <div id="main-modal">
+        <div class="photo">
+            <img src="images/login/loginPic.jpg">
+        </div>
+        <div id="login">
+            <p>还没有账号？<a href="registered.html">立即注册</a></p>
+            <form action="">
+                <label for="usename">账号名</label>
+                <input type="text" placeholder="请输入手机号/邮箱" name="uname" id="usename">
+                <i class="user"></i>
+                <label for="usepwd">密码</label>
+                <i class="pwd"></i>
+                <input type="password" placeholder="请输入密码" name="upwd" id="usepwd">
+                <input type="checkbox"  name="chk" id="chkbox">
+                <label for="chkbox">请保存我的这次登录密码</label>
+                <a href="#" id="wjmm">忘记密码？</a>
+                <input type="button" value="立即登录">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

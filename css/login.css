@@ -1,0 +1,122 @@
+*{box-sizing: border-box;}
+body {
+    font: 14px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+a{
+    color: #777777;
+    text-decoration: none;
+}
+/*登录*/
+#modal{
+    width:1040px;
+    padding:20px;
+    margin:10px auto;
+    background:#fff;
+}
+#modal input{border-radius:20px;}
+#modal div{
+    width:1000px;
+    margin:10px auto;
+}
+#modal div b{
+    font-size:30px;
+    font-weight: normal;
+    margin-left:20px;
+    margin-right:570px;
+}
+#modal div a:not(:first-child){
+    display:inline-block;
+    width:24px;
+    height:21px;
+}
+#modal div a.weixin{
+    background:url(../images/login.png) no-repeat -123px -11px;
+    position:relative;
+}
+#modal div a.weibo{background:url(../images/login.png) no-repeat -64px -11px;}
+#modal div a.weixin div{
+    position: absolute;
+    top:14px;
+    right:-65px;
+    width:169px;
+    height:0;
+    overflow: hidden;
+    transition:all .5s linear;
+    z-index:10;
+}
+#modal div a.weixin:hover div{height:204px;}
+#main-modal {
+    width:1000px;
+    margin:20px auto;
+    display:flex;
+    justify-content: space-between;
+}
+#main-modal div.photo{
+    width:605px;
+    height:403px;
+}
+#main-modal div#login{
+    width:385px;
+    height:405px;
+}
+#main-modal div#login form{
+    padding:20px 30px;
+    width:100%;
+    height:386px;
+    border:1px solid #ddd;
+    background:#fff;
+    position:relative;
+}
+#main-modal div#login p{
+    width:100%;
+    text-align:right;
+}
+#modal #main-modal div#login a{
+    color:#E4393C;
+    width:70px;
+}
+#usename,#usepwd{
+    width:300px;
+    height:40px;
+    padding-left:20px;
+    display:block;
+    border:1px solid #ccc;
+    margin:10px 5px;
+    outline:none;
+}
+#wjmm{margin-left:50px;}
+[type='button']{
+    width:300px;
+    background:#e4393c;
+    text-align:center;
+    height:40px;
+    line-height: 40px;
+    color:#fff;
+    outline:none;
+    border:1px solid #E4393C;
+    border-radius: 3px;
+    margin-top:10px;
+}
+#main-modal div#login form i{
+    position:absolute;
+    left:39px;
+    width:16px;
+    height:19px;
+}
+i.user{
+    background:url(../images/register.png) no-repeat 0 0;
+    top:60px;
+}
+i.pwd{
+    background:url(../images/register.png) no-repeat 0 -25px;
+    top:137px;
+}

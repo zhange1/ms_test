@@ -1,0 +1,328 @@
+/*轮播图区域***********************************/
+#photos{
+    height:448px;
+    margin:0 auto;
+    overflow:hidden;
+}
+#photos img{/*轮播广告绝对定位，z-index为-1*/
+    position:absolute;
+    z-index:-1;
+    opacity:0;
+    transition:all 2s linear;
+}
+#photos img.active{
+    z-index:0;
+    opacity:1;
+}
+#photos>ul{
+    right:540px;
+    bottom:20px;
+}
+#photos>ul>li{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:#3e3e3e;
+    text-align:center;
+    line-height:20px;
+    color:#fff;
+    margin-right:10px;
+}
+#photos>ul>li:hover{
+    background:#fa0;
+    cursor:pointer;
+}
+#photos>ul>li.active{background:#fa0;}
+/*标签页******************/
+#labelPage{
+    height:40px;
+    margin:10px auto;
+}
+#labelPage>a{
+    width:238px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-size:18px;
+    border-bottom:2px solid #F0F0F0;
+}
+#labelPage>a.active{
+    color:#E31939;
+    border-bottom:2px solid #E31939;
+}
+#labelPage>a>b{
+    width:0;
+    height:0;
+    position:absolute;;
+    bottom:0;
+    left:117px;
+    border:5px solid transparent;
+}
+#labelPage>a>b.active{border-bottom-color: #E31939}
+div.PageNum{margin:0 auto;}
+/*图片显示区宽度，绝对定位，弹性布局，内容自动分布距离*/
+div.PageNum div{
+    top:0;
+    left:0;
+}
+/*a 变成行内块，宽度，高度，内容水平居中*/
+div.PageNum a{
+    display:inline-block;
+    width:200px;
+    height:200px;
+    text-align:center;
+}
+/*图片初始状态*/
+div.PageNum a img{
+    width:160px;
+    transition:all 1s linear;
+    border:1px solid #fff;
+    border-radius:10px;
+}
+div.PageNum a:hover img{
+    width:200px;
+    border-radius:30px;
+}
+/*每个div的初始状态*/
+div.PageNum div.Paged{
+    opacity:0;
+    transition:all .2s linear;
+    z-index:0;
+}
+div.Paged span{
+    margin-left:10px;
+    color:#FFAA47;
+}
+/*添加.active 后的状态*/
+div.PageNum div.Paged.active{
+    opacity:1;
+    z-index:1;
+}
+/*进入分厂图片区域*/
+#factory,#factory div.factory-3,div.floor>header{width:100%;}
+#factory{
+    margin-top:250px;
+    background:#fa0;
+}
+#factory>div{margin:10px auto;}
+#factory div.factory-1{
+    width:210px;
+    height:290px;
+    background:url(../images/zy.png) no-repeat;
+}
+#factory div.factory-2{width:1000px;}
+div.factory-2 a{
+    margin-bottom:10px;
+    transform:scale(1,1);
+    transition:all .3s linear;
+}
+div.factory-2 a:hover{transform:scale(1.2,1.2)}
+#factory div.factory-3{
+    margin-top:10px;
+    width:1210px;
+    height:180px;
+}
+div.factory-3 a{
+    position:absolute;
+    top:0;
+    left:-100%;
+    transform:rotate(0deg);
+}
+div.factory-3 a:first-child{transition:all 1s linear}
+div.factory-3 a:nth-child(2){transition:all 2s linear}
+div.factory-3 a:nth-child(3){transition:all 3s linear}
+div.factory-3 a:last-child{transition:all 4s linear}
+div.factory-3 a:first-child.active{left:0;transform:rotate(360deg)}
+div.factory-3 a:nth-child(2).active{left:300px;transform:rotate(360deg)}
+div.factory-3 a:nth-child(3).active{left:600px;transform:rotate(360deg)}
+div.factory-3 a:last-child.active{left:900px;transform:rotate(360deg)}
+
+/*Floor*************/
+div.floor{margin:20px auto;}
+div.floor header{
+    height:30px;
+    position:relative;
+    line-height:30px;
+}
+div.floor header h3>a:hover{color:#e4393c;}
+/*店铺图标*/
+div.shoplogo{
+    height:60px;
+    padding:10px 10px;
+    margin:5px auto;
+    background:#f7f7f7;
+}
+div.shoplogo a{
+    display:inline-block;
+    height:40px;
+    width:120px;
+    line-height:40px;
+    text-align:center;
+}
+div.shoplogo a:not(:first-child){border-left:1px dashed #CCC;}
+/*标签页样式*/
+div.floor header ul{
+    width:450px;
+    height:30px;
+    top:1px;
+    right:0;
+    z-index:10;
+}
+div.floor header ul>li{
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #DDD;
+}
+#onef header ul>li{border-bottom-color:#8DD514;}
+#twof header ul>li{border-bottom-color:#FF9229;}
+#threef header ul>li{border-bottom-color:#2ABFF7;}
+#fourf header ul>li{border-bottom-color:#FE7A65;}
+#fivef header ul>li{border-bottom-color:#83CFFF;}
+#sixf header ul>li{border-bottom-color:#FFB901;}
+#sevenf header ul>li{border-bottom-color:#85AEFE;}
+#eigthf header ul>li{border-bottom-color:#C87BFF;}
+/*鼠标移入后li的样式*/
+#onef header ul>li.active{
+    border-color:#8DD514;
+    border-bottom-color:#fff;
+}
+#twof header ul>li.active{
+    border-color:#FF9229;
+    border-bottom-color:#fff;
+}
+#threef header ul>li.active{
+    border-color:#2ABFF7;
+    border-bottom-color:#fff;
+}
+#fourf header ul>li.active{
+    border-color:#FE7A65;
+    border-bottom-color:#fff;
+}
+#fivef header ul>li.active{
+    border-color:#83CFFF;
+    border-bottom-color:#fff;
+}
+#sixf header ul>li.active{
+    border-color:#FFB901;
+    border-bottom-color:#fff;
+}
+#sevenf header ul>li.active{
+    border-color:#85AEFE;
+    border-bottom-color:#fff;
+}
+#eigthf header ul>li.active{
+    border-color:#C87BFF;
+    border-bottom-color:#fff;
+}
+/*下方图片区域*/
+div.floor>div.bottom{width:100%;}
+/*左边图片区*/
+div.floor div.bottom div.blf{
+    height:530px;
+    width:240px;
+    position:relative;
+}
+/*背景颜色*/
+#f1{background:#8dd514;}
+#f2{background:#FF9229;}
+#f3{background:#2ABFF7;}
+#f4{background:#FE7A65;}
+#f5{background:#83CFFF;}
+#f6{background:#FFB901;}
+#f7{background:#85AEFE;}
+#f8{background:#C87BFF;}
+div.floor>div.bottom>div.blf>a{
+    position:absolute;
+    bottom:0;
+    left:0;}
+/*中间图片区 绝对定位*/
+div.floor>div.bottom>div.center{
+    width:820px;
+    height:530px;
+    position:absolute;
+    top:0;
+    left:240px;
+    border-top:1px solid ;
+}
+div.floor div.bottom div.center div a:hover{transform:scale(2,2)}
+#onef div.center{border-top-color:#8DD514;}
+#twof div.center{border-top-color:#FF9229;}
+#threef div.center{border-top-color:#2ABFF7;}
+#fourf div.center{border-top-color:#FE7A65;}
+#fivef div.center{border-top-color:#83CFFF;}
+#sixf div.center{border-top-color:#FFB901;}
+#sevenf div.center{border-top-color:#85AEFE;}
+#eigthf div.center{border-top-color:#C87BFF;}
+/*中间图片区域每个图片*/
+div.floor  div.center>div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+div.floor>div.bottom>div.center>div>div{
+    width:173px;
+    height:265px;
+    background:#fff;
+    border-bottom:1px solid #E7E7E7;
+    border-right:1px solid #e7e7e7;
+    text-align:center;
+    flex-grow: 1;
+}
+div.center p{
+    height:30px;
+    text-align:left;
+    padding-left:20px;
+    margin-top:10px;
+}
+div.center p.oldprice{text-decoration:line-through;}
+div.center p.price{color:#fa0;position:relative;font-size:18px;}
+/*购物车标志*/
+div.center p.price i{
+    position:absolute;
+    width:30px;
+    height:30px;
+    top:0;
+    right:5px;
+    cursor:pointer;
+    background:url(../images/add_to_cart.png)  no-repeat;
+    animation:scorll 2s linear infinite;
+}
+@keyframes scorll {
+  0%{transform:rotate(0deg)}
+  25%{transform:rotate(-45deg)}
+  50%{transform:rotate(45deg)}
+  75%{transform:rotate(45deg)}
+  100%{transform:rotate(-45deg)}
+}
+div.floor>div.bottom>div.center>div.active{z-index:10;}
+/*右侧图片区域*/
+div.floor>div.bottom>div.brt{
+    width:150px;
+    height:530px;
+    top:0;
+    right:0;
+}
+/*左侧固定定位*/
+#affix {
+    position:fixed;
+    left:30px;
+    top:75px;
+    width:2.8em;
+    text-align:center;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #918888;
+    display:none;
+}
+#affix li{padding: 12px 0;}
+#affix li + li {border-top: 1px dashed #fa0;}
+#affix a {color:#935351;}
+#affix li.active {background: #fa0;}
+#affix li.active a{color:#fff;}
+

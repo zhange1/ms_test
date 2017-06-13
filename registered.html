@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>注册-美食林欢迎您！</title>
+    <link rel="stylesheet" href="css/registered.css">
+    <link rel="icon" href="images/image/favicon1.ico"/>
+</head>
+<body>
+<div id="modal">
+    <div>
+        <a href="#"><img src="images/login/shunin.png"></a>
+        <b>欢迎注册</b>
+        <a href="#" class="weixin">
+            <div>
+                <img src="images/login/weixin3.png">
+            </div>
+        </a>
+        <a href="#" class="weibo"></a>
+    </div>
+    <div id="main-modal">
+        <div class="photo">
+            <img src="images/login/loginPic.jpg">
+        </div>
+        <div id="login">
+            <p>已有账号!<a href="login.html">立即登陆</a></p>
+            <form action="" method="get">
+                <input type="text" placeholder="请输入手机号/邮箱" name="username" autofocus>
+                <span class="vali_info">10个字符以内的字母、数字或下划线的组合</span>
+                <i class="telphone"></i>
+                <input type="password" placeholder="请输入密码" name="pwd">
+                <span class="vali_info">不少于6为字符</span>
+                <i class="password one"></i>
+                <input type="password" placeholder="请再次输入密码" name="rpwd">
+                <span class="vali_info">与上述密码不符</span>
+                <i class="password two"></i>
+                <input type="text" name="reg" placeholder="手机码验证">
+                <i class="telphone tel"></i>
+                <input type="button" name="btn" value="获取手机验证码">
+                <input type="checkbox" name="chk" id="chkbox" >
+                <label for="chkbox">我已看过并接受《用户协议》</label>
+                <input type="button" name="sub" value="立即注册">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

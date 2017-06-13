@@ -1,0 +1,23 @@
+//店铺切换
+$('#container').on('mouseenter','#menu>li',function(){
+    $(this).css('cursor','pointer');
+    if($(this).hasClass('bg')==false)
+        $(this).addClass('bg1');
+    else
+        $(this).removeClass('bg1');
+});
+$('#container').on('mouseout','#menu>li',function(){
+    $(this).removeClass('bg1');
+})
+$('#container').on('click','#menu>li',function(){
+    if($(this).siblings().hasClass('bg')){
+        $(this).addClass('bg').removeClass('bg1').siblings().removeClass('bg');
+    }
+})
+//下拉菜单
+$('#header').on('click','#nav-left>h3',function(){
+    if($('#drop-down').hasClass('down'))
+        $('#drop-down').removeClass('down').addClass('up');
+    else
+        $('#drop-down').removeClass('up').addClass('down');
+});

@@ -1,0 +1,157 @@
+*{box-sizing: border-box;}
+body {
+    font: 14px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+a{
+    color: #777777;
+    text-decoration: none;
+}
+/*页面顶部*/
+#modal{
+    width:1040px;
+    padding:20px;
+    margin:10px auto;
+    background:#fff;
+}
+input{border-radius:15px;}
+#modal div{
+    width:1000px;
+    margin:20px auto;
+}
+#modal div b{
+    font-size:30px;
+    font-weight: normal;
+    margin-left:20px;
+    margin-right:570px;
+}
+#modal div a:not(:first-child){
+    display:inline-block;
+    width:24px;
+    height:21px;
+}
+#modal div a.weixin{
+    background:url(../images/login.png) no-repeat -123px -11px;
+    position:relative;
+}
+#modal div a.weibo{background:url(../images/login.png) no-repeat -64px -11px;}
+#modal div a.weixin div{
+    position: absolute;
+    top:14px;
+    right:-65px;
+    width:169px;
+    height:0;
+    overflow: hidden;
+    transition:all .5s linear;
+    z-index:10;
+}
+#modal div a.weixin:hover div{
+    height:204px;
+}
+/*主体信息*/
+#main-modal {
+    display:flex;
+    justify-content: space-between;
+}
+#main-modal div.photo{
+    width:605px;
+    height:403px;
+}
+#main-modal div#login{
+    width:385px;
+    height:405px;
+}
+#main-modal div#login form{
+    padding:20px 30px;
+    width:100%;
+    height:386px;
+    border:1px solid #ddd;
+    background:#fff;
+    border-radius:10px;
+}
+#main-modal div#login p{
+    width:100%;
+    text-align:right;
+}
+#modal #main-modal div#login a{
+    color:#E4393C;
+    width:70px;
+}
+#modal #main-modal div#login form{position:relative;}
+#modal #main-modal div#login input:not([name='chk']){
+    width:300px;
+    height:40px;
+    display:block;
+    border:1px solid #ccc;
+    margin: 5px;
+    outline:none;
+    padding-left:20px;
+}
+#wjmm{margin-left:50px;}
+[name='sub']{
+    background:#e4393c;
+    text-align:center;
+    line-height: 40px;
+    color:#fff;
+    border-radius: 3px;
+}
+i.telphone{
+     position:absolute;
+     width:16px;
+     height:21px;
+     background:url(../images/register.png) no-repeat 0 -50px;
+     top:35px;
+     left:39px;
+ }
+i.password{
+    position:absolute;
+    width:16px;
+    height:19px;
+    background:url(../images/register.png) no-repeat 0 -25px;
+    left:39px;
+}
+i.one{top:104px;}
+i.two{top:173px;}
+#modal #main-modal div#login form [name='reg']{
+    width:120px;
+    display:block;
+}
+#modal #main-modal div#login form [name='btn']{
+    padding:0;
+    width:100px;
+    position:absolute;
+    bottom:107px;
+    right:46px;
+    text-align:center;
+    background:#e4393c;
+    border:1px solid #E4393C;
+    color:#fff;
+    outline:none;
+}
+i.tel{top:241px;}
+ .vali_info{visibility:hidden;}/*页面初始不显示*/
+ .vali_fail{/*验证失败*/
+    padding-left:16px;
+    background:url(../images/err.png) no-repeat;
+    height:19px;
+    color:#E31939;
+}
+#modal #main-modal div#login .vali_success{/*验证成功*/
+    padding-left:16px;
+    position:relative;
+    display:inline-block;
+    left:310px;
+    bottom:31px;
+    width:0;
+    height:16px;
+    overflow:hidden;
+    background:url(../images/ok.png) no-repeat;
+}

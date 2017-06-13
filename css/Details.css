@@ -1,0 +1,351 @@
+h3{font-weight:normal;}
+#scale{
+    width:1210px;
+    margin:20px auto;
+}
+#scale{position:relative;}
+#aa{padding-left:12px;}
+#aa i.house{
+    position:absolute;
+    top:5px;
+    left:0;
+    display:inline-block;
+    width:11px;
+    height:11px;
+    background:url(../images/user_header.png) no-repeat -427px -210px;
+}
+/*放大镜部分*/
+#mediumDiv{
+    width: 352px;
+    height: 352px;
+    border: 1px solid #ddd;
+    margin-bottom:5px;
+    text-align:center;
+    position: relative;
+}
+#mediumDiv img{
+    width:350px;
+    height:350px;
+}
+#mask,#superMask{
+    position:absolute;
+    top:0;
+    left:0;
+}
+/*小div随鼠标一直移动*/
+#mask{
+    width: 175px;
+    height: 175px;
+    background: #ffa;
+    opacity: 0.5;
+    display:none;
+}
+/*较大div*/
+#superMask{
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+    cursor: move;
+}
+/*右侧div背景为最大图片*/
+#largeDiv{
+    position:absolute;
+    width:365px;
+    height:365px;
+    background-color:#fff;
+    border:1px solid #ddd;
+    top:20px;
+    left:355px;
+    z-index:999;
+    display:none;
+}
+/*下方小图片的外层父元素*/
+#scale h1{
+    width: 352px;
+    height: 54px;
+    overflow:hidden;
+    padding:0;
+    position:relative;
+}
+/*前后移动的按钮*/
+#scale a.backward,#scale a.forward{
+    width: 17px;
+    height: 54px;
+    background:url(../images/iconlist_1.png) no-repeat;
+    display:block;
+    z-index:20;
+    position:absolute;
+    top:0px;
+}
+/*绝对定位最左侧最右侧*/
+#scale a.backward{left:0px}
+#scale a.forward{right:0px;}
+/*按钮普通，鼠标移入，禁止操作背景图像*/
+#scale a.backward {background-position: 0px -139px;}
+#scale a.backward:hover {background-position: -34px -139px;}
+#scale a.backward.disabled {background-position: -68px -139px;}
+#scale a.forward {background-position: -17px -139px;}
+#scale a.forward:hover {background-position: -51px -139px;}
+#scale a.forward.disabled {background-position: -85px -139px;}
+/*产品的图标列表*/
+#scale #icon_list{
+    height: 54px;
+    position:absolute;
+    left: 20px;
+    top: 0;
+    display:flex;
+    flex-wrap:nowrap;
+}
+#scale #icon_list li{
+    width:62px;
+    text-align:center;
+}
+#scale #icon_list li img{
+    width: 50px;
+    height: 50px;
+    padding: 1px;
+    border: 1px solid #CECFCE;
+}
+#scale #icon_list li img:hover{
+    border: 2px solid #e4393c;
+    padding: 0;
+}
+/*右侧商品详情简介*/
+#r-detail{
+    width:44%;
+   position:absolute;
+    top:20px;
+    left:360px;
+}
+ul.summary{
+    background:#F5F5F5;
+    margin-top:10px;
+    padding:10px;
+}
+ul.summary li{
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:10px;
+}
+ul.summary li p{
+   width:75px;
+   text-align:left;
+}
+div.content{margin-left:10px;}
+div.content b{
+    color:#E4393C;
+    font-size:18px;
+}
+div.content a{
+    background:#FE596A;
+    margin-left:20px;
+    padding:2px 5px;
+    color:#fff;
+}
+/*累计评价*/
+ul.evaluation{
+    margin:10px 0;
+    border-top:1px dashed #E5DFDA;
+    border-bottom:1px dashed #E5DFDA;
+}
+ul.evaluation li:nth-child(2){
+    border-left:1px dashed #e5dfda;
+    border-right:1px dashed #e5dfda;
+}
+ul.evaluation li{
+    width:33%;
+    text-align:center;
+    height:40px;
+    line-height:40px;
+}
+ul.evaluation li a{
+    color:#F52648;
+    margin-left:5px;
+}
+/*自提，数量*/
+ul.summary-z li{
+    margin-bottom:10px;
+}
+ul.summary-z li p{
+    width:75px;
+    text-align:left;
+    margin-right:10px;
+}
+ul.summary-z li button{
+    width:30px;
+    height:30px;
+    text-align:center;
+    font-size:20px;
+}
+ul.summary-z li span{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height: 30px;
+}
+a.shop,a.shopcar{
+    display:inline-block;
+    width:110px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    font-size:16px;
+}
+a.shop{background:#FF6500;}
+a.shopcar{background:#E31939;}
+/*右侧美食林自营*/
+div.proprietary{
+    width:259px;
+    padding:10px;
+    background:#F9F9F9;
+    position:absolute;
+    top:10px;
+    right:0;
+    border:1px solid #ddd;
+    text-align: center;
+}
+div.proprietary ul{
+    border-bottom:1px dashed #ddd;
+    margin-bottom:10px;
+}
+div.proprietary ul li{
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:10px;
+}
+div.proprietary h3{
+    text-align: center;
+    border-bottom:1px solid #ddd;
+    padding:5px;
+    margin-bottom:10px;
+}
+div.proprietary ul li p{
+    width:60px;
+    text-align:left;
+    margin-right:10px;
+}
+div.wx{
+    width:121px;
+    height:121px;
+    margin:10px auto;
+    background:url(../images/user_header.png) no-repeat -9px -90px;
+}
+/*推荐产品*/
+div.r-product{
+    margin:10px auto;
+    width:1210px;
+    height:200px;
+    padding:20px 30px;
+    border:1px solid #ddd;
+    overflow:hidden;
+    position:relative;
+}
+div.r-product>div{
+    width:1540px;
+    position:absolute;
+    left:30px;
+    transition:all .3s linear;
+}
+div.r-product>div>a{
+    position:relative;
+    overflow:hidden;
+}
+div.r-product>div>a>div{
+    position:absolute;
+    bottom:-20px;
+    width:160px;
+    background:rgba(0,0,0,.5);
+    transition:all .3s linear;
+}
+div.r-product>div>a:hover div{bottom:0px;}
+div.r-product>div>a>div>p{
+    color:#fff;
+    padding:2px 10px;
+}
+/*左右按钮*/
+div.r-product>span{
+    position:absolute;
+    top:87px;
+    width:16px;
+    height:25px;
+    z-index:10;
+    cursor:pointer;
+}
+span.prev{
+    background:url(../images/upgrade_ad/goods_best_l.png) no-repeat;
+    left:5px;
+}
+span.prev.disabled{cursor:auto;}
+span.next{
+    background:url(../images/upgrade_ad/goods_best_r.png) no-repeat;
+    right:5px;
+}
+span.next.disabled{cursor:auto;}
+/*商品简介*/
+#middle{
+    width:1210px;
+    margin:10px auto;
+}
+/**左侧简介*/
+#m-left{width:18%}
+#m-right{width:80%}
+#m-left .mlo{
+    width:100%;
+    border:1px solid #ddd;
+    margin-bottom:10px;
+}
+#m-left .mlo ul li{
+    width:50%;
+    margin-bottom:10px;
+}
+#m-left .mlo ul{padding:5%}
+h3.hn{
+    height:30px;
+    line-height: 30px;
+    padding-left:5%;
+    background:#fafafa;
+    border-bottom:1px solid #ddd;
+}
+dl{margin-bottom:20px;}
+dt,dd{text-align:center;}
+dd a{
+    margin-left:5px;
+    color:#E31939;
+}
+/*右侧规格参数*/
+#m-right div.flex3{
+    width:100%;
+    border-bottom:2px solid #E31939;
+}
+div.flex3.active{
+    position:fixed;
+    top:0;
+}
+#m-right div.flex3 a{
+    width:15%;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    border:1px solid #ddd;
+    border-bottom:none;
+    background:#fff;
+}
+#m-right div.flex3 a.active{
+     background:#E31939;
+     color:#fff;
+ }
+ ul.mro{
+     padding:10px;
+     border:1px solid #ddd;
+ }
+ ul.mro li{
+     width:33%;
+     margin-bottom:10px;
+ }
+ #m-right img{margin:10px;}
+ div.mlo img{transition:all linear .3s}
+ div.mlo img:hover{
+     transform: scale(.9,.9);
+ }
